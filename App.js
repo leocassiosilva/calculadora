@@ -73,49 +73,48 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   conteudo: {
-    backgroundColor: 'red',
+    backgroundColor: '#000000',
     height:'60%',
-    width:'100%',
+    width:'98%',
     justifyContent: 'space-evenly',
+    borderRadius:10
 
    }, 
    display:{
-     backgroundColor:'blue',
+     backgroundColor:'#d4dfbf',
      height:100,
      margin:10,
      borderRadius:10
    }, 
    limpar:{
-    backgroundColor:'black',
+    backgroundColor:'#ff7900',
     height:60,
-    width:60, 
+    width:70, 
     alignSelf:'flex-end',
     borderRadius:10,
     marginRight:10 
   }, 
   containerBotoes:{
-    backgroundColor:'white',
     height:280,
     flexDirection:'row',
     justifyContent: 'space-between',
     margin:10
   },
   colunaBotoes1:{
-    backgroundColor:'blue',
     height:280,
-    width:60,
+    width:70,
     justifyContent: 'space-evenly',
   },
   botoes:{
-    backgroundColor:'black',
+    backgroundColor:'#404146',
     height:60,
-    width:60,
+    width:70,
     borderRadius:10
   },
   botoess:{
-    backgroundColor:'black',
+    backgroundColor:'#404146',
     height:130,
-    width:60,
+    width:70,
     borderRadius:10
   }
 
