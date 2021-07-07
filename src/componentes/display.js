@@ -1,50 +1,39 @@
 import React from 'react';
-import { StyleSheet, Text, View, TouchableHighlight} from 'react-native';
+import { StyleSheet, Text, View, TouchableHighlight, ColorPropType} from 'react-native';
 
 export default props=>{
 
-    const  estilosBotoes=[styles.btn]
 
-    if(props.limpar){
-        estilosBotoes.push(styles.btn_limpar)
-    }
-
-    if(props.soma){
-        estilosBotoes.push(styles.btn_soma)
-    }
     return(
-        <TouchableHighlight style={estilosBotoes}>
-            <Text style={styles.texto} >{props.label}</Text>
-        </TouchableHighlight>
+        <View style={styles.display}>
+            <Text style={styles.textoDisplayOperacao}
+            numberOfLines={1}>{props.valor}</Text>
+            <Text style={styles.textoDisplayResultado}
+            numberOfLines={1}>{props.resultado}</Text>
+        </View>
     )
 }
 
 const styles = StyleSheet.create({
     
-    btn:{
-        backgroundColor:'#404146',
-        height:60,
-        width:70,
+    display:{
+        backgroundColor:'#d4dfbf',
+        height:100,
+        margin:10,
         borderRadius:10,
-        justifyContent:'center',
-        alignItems:'center',
+        
     },
-    btn_limpar:{
-        backgroundColor:'#ff7900',
-        height:60,
-        width:70, 
+    textoDisplayOperacao:{
+        color:'black',
+        fontSize:30,
         alignSelf:'flex-end',
-        borderRadius:10,
-        marginRight:10 
+        padding:5
     },
-    texto:{
-        fontSize:25,
-        color:'white'
-    },
-    btn_soma:{
-        backgroundColor:'#404146',
-        height:129,
-        width:70,
-        borderRadius:10
-    } 
+    textoDisplayResultado:{
+        color:'black',
+        fontSize:30,
+        alignSelf:'flex-end',
+        padding:5
+    }
+    
 });

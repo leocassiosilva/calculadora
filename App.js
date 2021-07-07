@@ -2,13 +2,16 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, TouchableHighlight } from 'react-native';
 import Btn from './src/componentes/botao'
+import Display from './src/componentes/display'
 
 export default function App() {
   return (
     <View style={styles.container}>
       <View style={styles.conteudo}>
         <Text>Calculadora!</Text>
-        <View style={styles.display}></View>
+        <View>
+          <Display valor={0} resultado={0} />
+        </View>
 
         <View>
           <Btn label="CE/C" limpar></Btn>
