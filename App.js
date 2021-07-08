@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TouchableHighlight } from 'react-native';
+import Btn from './src/componentes/botao'
 
 export default function App() {
   return (
@@ -8,56 +9,50 @@ export default function App() {
       <View style={styles.conteudo}>
         <Text>Calculadora!</Text>
         <View style={styles.display}></View>
-        <View style={styles.limpar}></View>
+
+        <View>
+          <Btn label="CE/C" limpar></Btn>
+        </View>
+
+
+
         <View style={styles.containerBotoes}>
           <View style={styles.colunaBotoes1}>
-            <View style={styles.botoes}>
-            </View>
-            <View style={styles.botoes}>
-            </View>
-            <View style={styles.botoes}>
-            </View>
-            <View style={styles.botoes}>
-            </View>
+            <Btn label="7"></Btn>
+            <Btn label="4"></Btn>
+            <Btn label="1"></Btn>
+            <Btn label="0"></Btn>
           </View>
           <View style={styles.colunaBotoes1}>
-          <View style={styles.botoes}>
-            </View>
-            <View style={styles.botoes}>
-            </View>
-            <View style={styles.botoes}>
-            </View>
-            <View style={styles.botoes}>
-            </View>
+            <Btn label="8"></Btn>
+            <Btn label="2"></Btn>
+            <Btn label="2"></Btn>
+            <Btn label="00"></Btn>
           </View>
           <View style={styles.colunaBotoes1}>
-            <View style={styles.botoes}>
-            </View>
-            <View style={styles.botoes}>
-            </View>
-            <View style={styles.botoes}>
-            </View>
-            <View style={styles.botoes}>
-            </View>
+            <Btn label="9"></Btn>
+            <Btn label="6"></Btn>
+            <Btn label="3"></Btn>
+            <Btn label="."></Btn>
           </View>
           <View style={styles.colunaBotoes1}>
-          <View style={styles.botoes}>
-            </View>
-            <View style={styles.botoes}>
-            </View>
-            <View style={styles.botoess}>
-            </View>
+            <Btn label="%"></Btn>
+
+            <Btn label="X"></Btn>
+
+            <Btn label="+" soma></Btn>
+
             
           </View>
           <View style={styles.colunaBotoes1}>
-          <View style={styles.botoes}>
-            </View>
-            <View style={styles.botoes}>
-            </View>
-            <View style={styles.botoes}>
-            </View>
-            <View style={styles.botoes}>
-            </View>
+            <Btn label=">"></Btn>
+
+            <Btn label="/"></Btn>
+
+            <Btn label="-"></Btn>
+
+            <Btn label="="></Btn>
+
           </View>
         </View>
       </View>
@@ -111,11 +106,6 @@ const styles = StyleSheet.create({
     width:70,
     borderRadius:10
   },
-  botoess:{
-    backgroundColor:'#404146',
-    height:130,
-    width:70,
-    borderRadius:10
-  }
+  
 
 });
