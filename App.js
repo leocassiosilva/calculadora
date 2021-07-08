@@ -20,7 +20,6 @@ export default function App() {
   //Função responsavel por pegar o digito (d) e adicionar ao display
   const addDigito=(d)=>{ 
       estado_op = estados.realizada
-      alert(estado_op)
       //essa estrutura serve excluivamente para colocar o valor do resultado no lugar de um digito em caso do usuario querer realizar uma operção com o resultado anterior 
       if((d == '+' || d == '-' || d == '/' || d == '*') && estado_op == true){
         
