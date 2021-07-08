@@ -13,7 +13,7 @@ export default props=>{
         estilosBotoes.push(styles.btn_soma)
     }
     return(
-        <TouchableHighlight style={estilosBotoes}>
+        <TouchableHighlight style={estilosBotoes} onPress={props.acao}>
             <Text style={styles.texto} >{props.label}</Text>
         </TouchableHighlight>
     )
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     },
     btn_soma:{
         backgroundColor:'#404146',
-        height:129,
+        height:130,
         width:70,
         borderRadius:10
     } 

@@ -1,16 +1,36 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, Text, View, TouchableHighlight } from 'react-native';
 import Btn from './src/componentes/botao'
 import Display from './src/componentes/display'
 
+let estados={
+  valor:'',
+  resultado:0,
+  realizada:false,
+  
+}
+
+
 export default function App() {
+
+  const[valorDisplay, setValorDisplay] = useState(estados.valor)
+  const[resultadoDisplay, setResultadoDisplay] = useState(estados.resultado)
+
+  const addDigito=(d)=>{
+      estados.valor = estados.valor + d //recebe o valor da tela e o digitado
+      setValorDisplay(estados.valor)
+      setResultadoDisplay(estados.resultado)
+      estados.realizada=false
+      alert(d)
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.conteudo}>
         <Text>Calculadora!</Text>
         <View>
-          <Display valor={0} resultado={0} />
+          <Display valor={valorDisplay} resultado={0} />
         </View>
 
         <View>
@@ -21,7 +41,7 @@ export default function App() {
 
         <View style={styles.containerBotoes}>
           <View style={styles.colunaBotoes1}>
-            <Btn label="7"></Btn>
+            <Btn label="7" acao={()=>{addDigito('7')}}></Btn>
             <Btn label="4"></Btn>
             <Btn label="1"></Btn>
             <Btn label="0"></Btn>
